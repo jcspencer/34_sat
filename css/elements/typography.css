@@ -1,0 +1,48 @@
+body {
+  font-family: 'Serifa BT';
+  font-size: 20px;
+  color: #333333;
+}
+p {
+  line-height: 1.5;
+  margin: 20px 0;
+}
+p a {
+  text-decoration: underline;
+}
+h1 {
+  font-family: 'BureauGrotCond';
+  font-weight: bold;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Sweet Sans Pro';
+  font-weight: 500;
+}
+a {
+  color: #5E9BAA;
+}
+a:hover,
+a:focus {
+  color: #8bb7c2;
+}
+a img:hover,
+a img:focus {
+  cursor: zoom-in;
+}
+blockquote {
+  color: #777777;
+}
+hr.small {
+  max-width: 100px;
+  margin: 15px auto;
+  border-width: 4px;
+  border-color: white;
+}
+.figure {
+  font-family: 'Letter Gothic';
+  font-size: 16px;
+}

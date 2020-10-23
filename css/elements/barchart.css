@@ -1,0 +1,25 @@
+/*
+ * Barcharts
+ */
+.bar--gov {
+  fill: #f15a5a;
+}
+.bar--ind {
+  fill: #3eba6f;
+}
+.bar--cat {
+  fill: #2d95bf;
+}
+.bar--ovr {
+  fill: #f0c419;
+}
+.axis text {
+  font-family: 'Sweet Sans Pro';
+  font-size: 14px;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000000;
+  shape-rendering: auto;
+}

@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="An investigation into the average VCE study scores of students at independent schools in comparison to Catholic and government secondary schools.">
+    <meta name="author" content="James Spencer">
+
+    <title>Are Victorian private schools better? :: An in-depth analysis into Victoria's schools</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w="crossorigin="anonymous">
+
+    <!-- Theme CSS -->
+    <link href="dist/css/style.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" integrity="sha256-AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA="crossorigin="anonymous">-->
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" integrity="sha256-ymZGho+WjeQQ2jvjHInYJd0h20DI6/AE0fYq+BGYXqY="crossorigin="anonymous">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+          <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            Menu <i class="fa fa-bars"></i>
+          </button>-->
+          <a class="navbar-brand" href="index.html">Are private schools better?</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Technical Breakdown</a>
+            </li>
+          </ul>
+        </div>
+        /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+    </nav>
+
+    <!-- Page Header -->
+    <header class="intro-header" style="background-image: url('dist/img/brown_blackboard.jpeg')">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Are Victorian private schools better?</h1>
+              <h1 class="subheading">
+                An investigation into the average VCE study scores of students at independent
+                schools in comparison to Catholic and government secondary schools.
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <span>
+              <h2 class="section-heading">
+                Introduction
+              </h2>
+
+              <p>
+                In Australia, there is an ongoing debate about whether attending an independent school versus a non-independent school results in students achieving a higher ATAR (Australian Tertiary Admission Rank) score at the end of Year 12.
+              </p>
+
+              <p>
+                This research project will attempt to answer the following question:
+              </p>
+
+              <p>
+                <blockquote>
+                  Is there any correlation between a school's fees and it's average Year 12 results?
+                </blockquote>
+              </p>
+
+              <h3>
+                Discussion and Research
+              </h3>
+
+              <p>
+                Literature and media throughout Australia seems to suggest that there is a range of different theories
+                as to whether private schools are better than public schools and vice versa.
+              </p>
+
+              <p>
+                An article titled <a href="http://www.businessinsider.com.au/the-great-school-debate-public-versus-private-education-2015-6">The Great School Debate: Public versus private education</a> by Business Insider discusses this issue, displaying arguments from both sides of the debate.
+              </p>
+
+              <p>
+                The article follows researcher Barbara Preston, who argues that state school educated children actually do better at university than those who attend a private or independent school.
+              </p>
+
+              <p>
+                In response, a letter written by Geoff Ryan, CEO of the Association of Heads of Independent Schools of Australia (AHISA), who claimed that:
+                <blockquote>
+                  “On average, students in independent schools score six ATAR points higher than students in government schools, after taking into account both student socioeconomic status and student prior achievement.”
+                  ...
+                  “recent claims that there is no academic benefit for students in attending an independent school are wrong.”
+                  <footer>AHISA CEO <cite title="Source Title">Geoff Ryan</cite></footer>
+                </blockquote>
+              </p>
+
+              <p>
+                Another article, titled <a href="http://www.smh.com.au/nsw/private-v-public-schooling-20150416-1mm8bn.html">Private v Public schooling</a> by the Sydney Morning Herald quotes
+                Save Our Schools spokesman Trevor Cobbold as saying that:
+                <blockquote>
+                  <p>"If you think you are getting some advantage in education outcomes from sending your child to a private school rather than a government school, think again."</p>
+                  <footer>Save Our Schools' <cite title="Source Title">Trevor Cobbold</cite></footer>
+                </blockquote>
+              </p>
+
+              <span class="divider"></span>
+
+              <p>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/i3b6-h2Ifb0" allowfullscreen></iframe>
+                </div>
+
+                <span class="caption text-muted">
+                   A clip from the ABC programme ‘<i>The Agony of School</i>’, which also discusses this debate
+                </span>
+              </p>
+
+              <span class="divider"></span>
+
+              <p>
+                The information in these articles and video demonstrates that there are many reasonable arguments to support both types
+                of education in Victoria.
+
+                However, many of these arguments are highly subjective and do not look at the actual <i>data</i>.
+              </p>
+
+              <p>
+                In this project, we will only explore the direct relationship between educational sectors
+                of Victorian secondary schools and their average study scores.
+
+                This will be approached by examining data set containing purely statistical information published
+                by the <i>Department of Education</i> and the <i>Victorian Correction and Assessment Authority</i>
+                about the performance of schools around the state.
+              </p>
+
+              <h3>
+                Hypothesis
+              </h3>
+
+              <p>
+                The project set out with the following hypothesis:
+              </p>
+
+              <blockquote>
+                "If a school is independently funded then the school’s average scaled study score will be higher than government and Catholic schools in Victoria. This is because, theoretically, the school has more money to spend on its students."
+              </blockquote>
+
+              <h4>
+                Scope
+              </h4>
+
+              <p>
+                This study is limited to schools in Victoria who had students enrolled in VCE in 2015.
+                This does not include the scores of students partaking in the International Baccalaureate (IB) program, for example.
+              </p>
+
+              <h4>
+                Data Sets
+              </h4>
+
+              <p>
+                This analysis will use two key datasets:
+              </p>
+
+              <ol>
+                <li>The first dataset is from the DEECD via <i>Data.gov.au</i> <sup><a href="#references">[1]</a></sup>. It contains information such as the name, educational sector and location of every school in Victoria.</li>
+                <li>The second dataset is from the VCAA <sup><a href="#references">[2]</a></sup>. It contains the median study scores for each school partaking in the VCE in 2015.</li>
+              </ol>
+
+              <p>
+                These datasets will be combined to create a set of data that gives the name, educational sector, region, number of students and the median study score of each school school in Victoria.
+              </p>
+            </span>
+            <span class="divider"></span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <span>
+              <h2 class="section-heading">
+                Statewide Breakdown
+              </h2>
+
+              <p>
+                The first analysis looked at averages around the state.
+
+                This compared independent schools to catholic and government based solely on scaled study scores.
+              </p>
+
+              <h3>
+                Visualisation
+              </h3>
+             </span>
+           </div>
+
+            <div class="col-md-6">
+              <div id="statewide_map" class="map"></div>
+            </div>
+
+            <div class="col-md-6" id="barchart-parent">
+              <div class ="container-fluid">
+                <div class="row">
+                  <h1>Victoria</h1>
+
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <th>Number of Students</th>
+                        <td>92 195</td>
+                      </tr>
+                      <tr>
+                        <th>Number of Schools</th>
+                        <td>497</td>
+                      <tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="row">
+                  <div id="statewide_barchart"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class = "col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <span>
+                <p></p>
+
+                <h3>
+                  Preliminary Conclusion
+                </h3>
+
+                <p>
+                  This concludes that, overall, independent schools have median study scores higher than Catholic schools (by two points) and government schools (by four points).
+
+                  This confirms the first part of the original hypothesis, “If a school is independently funded then the school’s average scaled study score will higher than government and Catholic schools in Victoria. This is because, theoretically, the school has more money to spend on its students.”
+                </p>
+              </span>
+
+              <span class="divider"></span>
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <span>
+              <h2 class="section-heading">
+                Region-by-Region Breakdown
+              </h2>
+
+              <p>
+                Next, we modified the our first analysis to split the schools into their  <a href="javascript:;" data-toggle="tooltip" title="Barwon South Western, Gippsland, Grampians, Hume, Loddon Mallee and Northern, Southern, Eastern and Western Metropolitan">regions in Victoria</a> before calculating their weighted average study scores.
+              </p>
+
+              <p>
+                This was designed to identify if the location of a school contributed to its average study score. It also aimed to identify if the average scores of all educational sectors were affected by the location of schools.
+              </p>
+            </span>
+
+            <span class="divider"></span>
+          </div>
+
+          <!-- Start EASTERN METROPOLITAN -->
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <span>
+              <h3 class="section-heading">
+                Eastern Metropolitan
+              </h3>
+
+              <p>
+                The overall average for the Eastern Metropolitan region is just over <span class="text-success">4.5%</span> better than the state average,
+                making it the highest ranking region.
+
+                <ul>
+                  <li>
+                    Government schools in this region are <span class="text-success">5%</span> above the state average.
+                  </li>
+                  <li>
+                    Independent schools in this region are just over <span class="text-success">3%</span> above the state average.
+                  </li>
+                  <li>
+                    Catholic schools in this region are just over <span class="text-warning">4%</span> above the state average.
+                  </li>
+                </ul>
+              </p>
+            </span>
+          </div>
+
+          <div class="col-md-6">
+            <div id="em_map" class="map"></div>
+          </div>
+
+          <div class="col-md-6" id="barchart-parent">
+            <div class ="container-fluid">
+              <div class="row">
+                <h1>Eastern Metropolitan</h1>
+
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <th>Number of Students</th>
+                      <td>20 467</td>
+                    </tr>
+                    <tr>
+                      <th>Number of Schools</th>
+                      <td>93</td>
+                    <tr>
+                  </tbody>
+                </table>
+
+              </div>
+              <div class="row">
+                <div id="em_barchart"></div>
+              </div>
+            </div>
+          </div>
+
+          <span class="divider"></span>
+          <!-- End EASTERN METROPOLITAN -->
+
+          <!-- Start SOUTHERN METROPOLITAN -->
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <span>
+              <h3 class="section-heading">
+                Southern Metropolitan
+              </h3>
+
+              <p>
+                The overall average for the Southern Metropolitan region is just over <span class="text-success">3%</span> better than the state average,
+                making it the second highest ranking region.
+
+                <ul>
+                  <li>
+                    Government schools in this region are <span class="text-success">3.5%</span> above the state average.
+                  </li>
+                  <li>
+                    Independent schools in this region are just over <span class="text-success">0.75%</span> above the state average.
+                  </li>
+                  <li>
+                    Catholic schools in this region are just over <span class="text-warning">2%</span> above the state average.
+                  </li>
+                </ul>
+              </p>
+            </span>
+          </div>
+
+          <div class="col-md-6">
+            <div id="sm_map" class="map"></div>
+          </div>
+
+          <div class="col-md-6" id="barchart-parent">
+            <div class ="container-fluid">
+              <div class="row">
+                <h1>Southern Metropolitan</h1>
+
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <th>Number of Students</th>
+                      <td>21 674</td>
+                    </tr>
+                    <tr>
+                      <th>Number of Schools</th>
+                      <td>105</td>
+                    <tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row">
+                <div id="sm_barchart"></div>
+              </div>
+            </div>
+          </div>
+
+          <span class="divider"></span>
+          <!-- End SOUTHERN METROPOLITAN -->
+
+          <!-- Start WESTERN METROPOLITAN -->
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <span>
+              <h3 class="section-heading">
+                Western Metropolitan
+              </h3>
+
+              <p>
+                The overall average for the Western Metropolitan region is <span class="text-warning">0.3%</span> better than the state average,
+                making it the third highest ranking region.
+
+                <ul>
+                  <li>
+                    Government schools in this region are <span class="text-success">0.4%</span> above the state average.
+                  </li>
+                  <li>
+                    Independent schools in this region are just over <span class="text-warning">0.43%</span> below the state average.
+                  </li>
+                  <li>
+                    Catholic schools in this region are just under <span class="text-warning">2%</span> below the state average.
+                  </li>
+                </ul>
+              </p>
+            </span>
+          </div>
+
+          <div class="col-md-6">
+            <div id="wm_map" class="map"></div>
+          </div>
+
+          <div class="col-md-6" id="barchart-parent">
+            <div class ="container-fluid">
+              <div class="row">
+                <h1>Western Metropolitan</h1>
+
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <th>Number of Students</th>
+                      <td>13 798</td>
+                    </tr>
+                    <tr>
+                      <th>Number of Schools</th>
+                      <td>63</td>
+                    <tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row">
+                <div id="wm_barchart"></div>
+              </div>
+            </div>
+          </div>
+
+          <span class="divider"></span>
+          <!-- End WESTERN METROPOLITAN -->
+
+          <!-- Start BARWON SOUTH WEST -->
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <span>
+              <h3 class="section-heading">
+                Barwon South West
+              </h3>
+
+              <p>
+                The overall average for the Barwon South West region is <span class="text-warning">2.9%</span> lower than the state average. 
+
+                <ul>
+                  <li>
+                    Government schools in this region are <span class="text-danger">7.4%</span> below the state average.
+                  </li>
+                  <li>
+                    Independent schools in this region are just under <span class="text-warning">1.7%</span> below the state average.
+                  </li>
+                  <li>
+                    Catholic schools in this region are <span class="text-warning">0.23%</span> below the state average.
+                  </li>
+                </ul>
+              </p>
+            </span>
+          </div>
+
+          <div class="col-md-6">
+            <div id="bsw_map" class="map"></div>
+          </div>
+
+          <div class="col-md-6" id="barchart-parent">
+            <div class ="container-fluid">
+              <div class="row">
+                <h1>Barwon South West</h1>
+
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <th>Number of Students</th>
+                      <td>6 919</td>
+                    </tr>
+                    <tr>
+                      <th>Number of Schools</th>
+                      <td>44</td>
+                    <tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row">
+                <div id="bsw_barchart"></div>
+              </div>
+            </div>
+          </div>
+
+          <span class="divider"></span>
+          <!-- End BARWON SOUTH WEST -->
+
+          <!-- Start GRAMPIANS -->
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <span>
+              <h3 class="section-heading">
+                Grampians
+              </h3>
+
+              <p>
+                The overall average for the Grampians region is just under <span class="text-warning">3%</span> below the state average.
+
+                <ul>
+                  <li>
+                    Government schools in this region are <span class="text-warning">5.5%</span> below the state average.
+                  </li>
+                  <li>
+                    Independent schools in this region are just over <span class="text-success">1.6%</span> above the state average.
+                  </li>
+                  <li>
+                    Catholic schools in this region are just under <span class="text-warning">3.7%</span> below the state average.
+                  </li>
+                </ul>
+              </p>
+            </span>
+          </div>
+
+          <div class="col-md-6">
+            <div id="gr_map" class="map"></div>
+          </div>
+
+          <div class="col-md-6" id="barchart-parent">
+            <div class ="container-fluid">
+              <div class="row">
+                <h1>Grampians</h1>
+
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <th>Number of Students</th>
+                      <td>3 487</td>
+                    </tr>
+                    <tr>
+                      <th>Number of Schools</th>
+                      <td>28</td>
+                    <tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row">
+                <div id="gr_barchart"></div>
+              </div>
+            </div>
+          </div>
+
+          <span class="divider"></span>
+          <!-- End GRAMPIANS -->
+
+          <!-- Start NORTHERN METROPOLITAN -->
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <span>
+              <h3 class="section-heading">
+                Northern Metropolitan
+              </h3>
+
+              <p>
+                The overall average for the Northern Metropolitan region is just under <span class="text-warning">3.4%</span> below than the state average.
+
+                <ul>
+                  <li>
+                    Government schools in this region are <span class="text-success">3.5%</span> above the state average.
+                  </li>
+                  <li>
+                    Independent schools in this region are <span class="text-danger">6.1%</span> below the state average.
+                  </li>
+                  <li>
+                    Catholic schools in this region are just over <span class="text-warning">0.2%</span> below the state average.
+                  </li>
+                </ul>
+              </p>
+            </span>
+          </div>
+
+          <div class="col-md-6">
+            <div id="nm_map" class="map"></div>
+          </div>
+
+          <div class="col-md-6" id="barchart-parent">
+            <div class ="container-fluid">
+              <div class="row">
+                <h1>Western Metropolitan</h1>
+
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <th>Number of Students</th>
+                      <td>12 080</td>
+                    </tr>
+                    <tr>
+                      <th>Number of Schools</th>
+                      <td>68</td>
+                    <tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row">
+                <div id="nm_barchart"></div>
+              </div>
+            </div>
+          </div>
+
+          <span class="divider"></span>
+          <!-- End NORTHERN METROPOLITAN -->
+
+          <!-- Start LODDON MALLEE -->
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <span>
+              <h3 class="section-heading">
+                Loddon Mallee
+              </h3>
+
+              <p>
+                The overall average for the Loddon Mallee region is <span class="text-danger">5.3%</span> below the state average,
+                making it the third lowest ranking region in the state.
+
+                <ul>
+                  <li>
+                    Government schools in this region are <span class="text-danger">4.6%</span> below the state average.
+                  </li>
+                  <li>
+                    Independent schools in this region are just over <span class="text-warning">3%</span> below the state average.
+                  </li>
+                  <li>
+                    Catholic schools in this region are <span class="text-warning">1.7%</span> below the state average.
+                  </li>
+                </ul>
+              </p>
+            </span>
+          </div>
+
+          <div class="col-md-6">
+            <div id="lm_map" class="map"></div>
+          </div>
+
+          <div class="col-md-6" id="barchart-parent">
+            <div class ="container-fluid">
+              <div class="row">
+                <h1>Loddon Mallee</h1>
+
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <th>Number of Students</th>
+                      <td>5 716</td>
+                    </tr>
+                    <tr>
+                      <th>Number of Schools</th>
+                      <td>31</td>
+                    <tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row">
+                <div id="lm_barchart"></div>
+              </div>
+            </div>
+          </div>
+
+          <span class="divider"></span>
+          <!-- End LODDON MALLEE -->
+
+          <!-- Start GIPPSLAND-->
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <span>
+              <h3 class="section-heading">
+                Gippsland
+              </h3>
+
+              <p>
+                The overall average for the Gippsland region is just over <span class="text-danger">6.3%</span> below the state average,
+                making it the second lowest ranking region in the state.
+
+
+                <ul>
+                  <li>
+                    Government schools in this region are <span class="text-danger">5.4%</span> below the state average.
+                  </li>
+                  <li>
+                    Independent schoolsin this region are <span class="text-warning">4.4%</span> above the state average.
+                  </li>
+                  <li>
+                    Catholic schools in this region are just over <span class="text-danger">6.4%</span> above the state average.
+                  </li>
+                </ul>
+              </p>
+            </span>
+          </div>
+
+          <div class="col-md-6">
+            <div id="gi_map" class="map"></div>
+          </div>
+
+          <div class="col-md-6" id="barchart-parent">
+            <div class ="container-fluid">
+              <div class="row">
+                <h1>Gippsland</h1>
+
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <th>Number of Students</th>
+                      <td>3 948</td>
+                    </tr>
+                    <tr>
+                      <th>Number of Schools</th>
+                      <td>28</td>
+                    <tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row">
+                <div id="gi_barchart"></div>
+              </div>
+            </div>
+          </div>
+
+          <span class="divider"></span>
+          <!-- End GIPPSLAND -->
+
+          <!-- Start Hume -->
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <span>
+              <h3 class="section-heading">
+                Hume
+              </h3>
+
+              <p>
+                The overall average for the Hume region is just over <span class="text-danger">7.1%</span> below the state average,
+                making it the lowest ranking region in the state.
+
+                <ul>
+                  <li>
+                    Government schools in this region are <span class="text-danger">7%</span> below the state average.
+                  </li>
+                  <li>
+                    Independent schoolsin this region are just over <span class="text-warning">4.3%</span> above the state average.
+                  </li>
+                  <li>
+                    Catholic schools in this region are <span class="text-warning">3.7%</span> above the state average.
+                  </li>
+                </ul>
+              </p>
+            </span>
+          </div>
+
+          <div class="col-md-6">
+            <div id="hu_map" class="map"></div>
+          </div>
+
+          <div class="col-md-6" id="barchart-parent">
+            <div class ="container-fluid">
+              <div class="row">
+                <h1>Hume</h1>
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <th>Number of Students</th>
+                      <td>4 106</td>
+                    </tr>
+                    <tr>
+                      <th>Number of Schools</th>
+                      <td>37</td>
+                    <tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row">
+                <div id="hu_barchart"></div>
+              </div>
+            </div>
+          </div>
+
+          <span class="divider"></span>
+          <!-- End HUME -->
+
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <span>
+              <h3 class="section-heading">
+                Conclusion
+              </h2>
+
+              <p>
+                This concludes that the location of a school <i>somewhat</i> contributes to the school’s median study score, 
+                regardless of the school sector.
+              </p>
+
+              <p>
+                However, there are a number of exceptions where one particular type of school performs significantly
+                lower than others in a particular region and we cannot find specific reasoning for these outliers given the data available.
+              </p>
+
+              <p>
+                For example, in the Grampians region, government and Catholic schools are below average, but independent schools are above average.
+              </p>
+
+              <p>
+                The results show that the median study score differed by around three points points region-to-region. 
+                This identifies that, although some sectors may have a better overall score, some regions perform better than others, regardless of the type of school.
+              </p>
+            </span>
+
+            <span class="divider"></span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <span>
+              <h2 class="section-heading">
+                Fees vs. Scores Correlation
+              </h2>
+
+              <p>
+                Finally, we collected data that combined the name, median study score and the annual fees for <i>10</i> independent schools around the state.
+                This was designed to test whether an increase in school fees actually has any effect on study scores.
+              </p>
+
+              <p>
+                To create this table, we randomly selected five metropolitan schools and five regional schools from the dataset.
+              </p>
+
+              <p>
+                We then browsed their websites to gather the value of their annual school fees (for a VCE student).
+              </p>
+
+              <table class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th>School Name</th>
+                    <th>Location</th>
+                    <th>Annual Fees</th>
+                    <th>Avg. Study Score</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>Melbourne Grammar</td>
+                    <td>Metro</td>
+                    <td>$30 360 <sup><a href="#references">[3]</a></sup></td>
+                    <td>34</td>
+                  </tr>
+                  <tr>
+                    <td>Methodist Ladies' College</td>
+                    <td>Metro</td>
+                    <td>$28 560 <sup><a href="#references">[4]</a></sup></td>
+                    <td>35</td>
+                  </tr>
+                  <tr>
+                    <td>Ruyton Girls'</td>
+                    <td>Metro</td>
+                    <td>$28 860 <sup><a href="#references">[5]</a></sup></td>
+                    <td>35</td>
+                  </tr>
+                  <tr>
+                    <td>Brighton Grammar</td>
+                    <td>Metro</td>
+                    <td>$28 335 <sup><a href="#references">[6]</a></sup></td>
+                    <td>33</td>
+                  </tr>
+                  <tr>
+                    <td>Trinity Grammar</td>
+                    <td>Metro</td>
+                    <td>$29 432 <sup><a href="#references">[7]</a></sup></td>
+                    <td>35</td>
+                  </tr>
+                  <tr>
+                    <td>Girton Grammar</td>
+                    <td>Regional</td>
+                    <td>$13 108 <sup><a href="#references">[8]</a></sup></td>
+                    <td>34</td>
+                  </tr>
+                  <tr>
+                    <td>Ballarat Grammar School</td>
+                    <td>Regional</td>
+                    <td>$18 860 <sup><a href="#references">[9]</a></sup></td>
+                    <td>33</td>
+                  </tr>
+                  <tr>
+                    <td>Braemar College</td>
+                    <td>Regional</td>
+                    <td>$12 060 <sup><a href="#references">[10]</a></sup></td>
+                    <td>32</td>
+                  </tr>
+                  <tr>
+                    <td>Gippsland Grammar</td>
+                    <td>Regional</td>
+                    <td>$15 490 <sup><a href="#references">[11]</a></sup></td>
+                    <td>33</td>
+                  </tr>
+                  <tr>
+                    <td>Goulburn Valley Grammar</td>
+                    <td>Regional</td>
+                    <td>$13 728  <sup><a href="#references">[12]</a></sup></td>
+                    <td>35</td>
+                  </tr>
+                </tbody>
+              </table>
+            </span>
+
+            <p>
+              Below is a scatter plot that visually displays these results.
+
+              A trend line is also placed on top to visualise the relationship between fees and scores.
+            </p>
+
+            <span class="divider"></span>
+          </div>
+
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div id="scatterplot"></div>
+          </div>
+
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <p>
+              Visually, there doesn't seem to be any relationship between the two variables, as the data doesn't actually seem to follow any sort of trend.
+            </p>
+
+            <p>
+              <div class="text-center center-block">
+                <button type="button" class="btn btn-info" id="math-popover-toggle" data-toggle="popover" data-placement="bottom" title="Mathematical Explanation">Mathematical Explanation</button>
+              </div>
+            </p>
+
+            <div id="math-popover" style="display: none">
+              In statistics, there is a number called the 'correlation coefficient' (r<sup>2</sup>), which shows how much one variable effects another.
+
+
+              In the case of this data, it shows how much school fees effect study scores.
+
+              Here, r<sup>2</sup> equals ~0.21, meaning that there is <i>little to no correlation</i> between school fees and study scores.
+            </div>
+
+            <p>
+              This concludes that there is <b>not</b> a strong relationship between school fees and median study scores, meaning that school fees have actually little to no effect on the median study scores of a school.
+            </p>
+
+            <p>
+              This refutes the second part of the original hypothesis,
+
+              “If a school is independently funded then the school’s average scaled study score will be higher than government and Catholic schools in Victoria. <b>This is because, theoretically, the school has more money to spend on its students.</b>”
+            </p>
+
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <span>
+              <h2 class="section-heading">
+               Conclusion
+              </h2>
+
+              <p>
+                This project set out to discover whether independent schools earn better study scores than government and Catholic schools.
+                
+                The idea behind this is that these schools theoretically have more money to spend on their students.
+              </p>
+
+              <p>
+                The evidence collected confirms <i>part</i> of original hypothesis. 
+                <ul>
+                  <li>The average study score for Independent schools was higher than Catholic schools and Government schools; however</li>
+                  <li>there was not a relationship between school fees and median study scores for schools.</li>
+                </ul>
+              </p>
+
+              <p>
+                However, correlation does not imply causation.
+                It simply cannot be confirmed if an increase in study scores is directly caused by an increase in school fees given the data we have available.
+              </p>
+
+              <p>
+                It is beyond the scope of this project to understand other factors that may contribute to study scores, such as student socioeconomic status (which was not researched).
+              </p>
+
+              <h3>
+                Future Work
+              </h3>
+              <p>
+                Consideration could be given to improving the understanding of the results with further research in this area to reveal the underlying cause by taking more factors into account.
+                It would also be interesting to increase the sample size to around 200 independent schools to ensure a better representation of school fees vs median study scores from a wider variety of regions.
+              </p>
+            </span>
+
+            <span class="divider"></span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <span>
+              <h2 class="section-heading" id="references">
+               References
+              </h2>
+
+              <p>
+                All images in this work (unless stated otherwise) are sourced from <a href="https://unsplash.com/">Unsplash</a>, which shares photos for use under the Creative Commons Zero licence, found <a href=" https://creativecommons.org/publicdomain/zero/1.0/">here</a>.
+              </p>
+
+              <p>
+                The following references use <a href="https://www.ieee.org/documents/ieeecitationref.pdf">IEEE referencing style</a>.
+              </p>
+
+              <h3>
+                Datasets
+              </h3>
+
+              <ul>
+                <li class="reference">[1] Department of Education and Early Childhood Development, ‘School Locations (Victoria)’, 2015. [Online]. Available: https://data.gov.au/dataset/school-locations-victoria URL. [Accessed: 10 April 2016].</li>
+                <li class="reference">[2] Victorian Curriculum and Assessment Authority, Post Compulsory Completion and Achievement Information, 2015’, 2015. [Online]. Available: http://www.vcaa.vic.edu.au/Pages/vce/statistics/schoolstats/index.aspx URL [Accessed: 10 April 2016].</li>
+              </ul>
+
+              <h3>
+                School Fees
+              </h3>
+
+              <ul>
+                <li class="reference">[3] Melbourne Grammar School, "Admissions | Melbourne Grammar School", 2016. [Online]. Available: https://www.mgs.vic.edu.au/mg/enrol. [Accessed: 24- May- 2016].</li>
+                <li class="reference">[4] Methodist Ladies’ College, “Fees and Conditions | MLC", ”2016. [Online]. Available: https://www.mlc.vic.edu.au/enrol/fees-and-conditions. [Accessed: 24- May- 2016].</li>
+                <li class="reference">[5] Ruyton Girl's School, "Ruyton Girl's School 2015 Tuition Fees", 2015. [Online]. Available:  http://www.ruyton.vic.edu.au/public/files/files/10322 RGS_Fees_2015_v3.pdf.[Accessed: 25- May- 2016].</li>
+                <li class="reference">[6] Brighton Grammar, "Fees", 2016. [Online]. Available: https://www.brightongrammar.vic.edu.au/learnwithus/apply-to-brighton-grammar/fees/. [Accessed: 25- May- 2016].</li>
+                <li class="reference">[7] Trinity Grammar School, "School Fees - 2016", 2016. [Online]. Available: http://www.trinity.vic.edu.au/wp-content/uploads/2015/06/FEES-FOR-2016.pdf. [Accessed: 25- May- 2016].</li>
+                <li class="reference">[8] Girton Grammar School, "Fees", 2016. [Online]. Available: http://www.girton.vic.edu.au/enrolments/fees/. [Accessed: 25- May- 2016].</li>
+                <li class="reference">[9] "Fees", Ballarat Grammar, 2016. [Online]. Available: http://www.bgs.vic.edu.au/enrolment/fees/. [Accessed: 25- May- 2016].</li>
+                <li class="reference">[10] Braemar College, "Fees and Charges - 2016", 2016. [Online]. Available: http://www.braemar.vic.edu.au/sites/default/files/files/20151021 Fees and Charges 2016.pdf. [Accessed: 25- May- 2016].</li>
+                <li class="reference">[11] "Fee Structure", Gippsland Grammar School, 2016. [Online]. Available: http://www.gippslandgs.vic.edu.au/index.php/enrolment/admissions/fee-structure. [Accessed: 25- May- 2016].</li>
+                <li class="reference">[12] "2016 School Fees Schedule", Goulburn Valley Grammar School, 2016. [Online]. Available: http://www.gvgs.vic.edu.au/images/stories/pdfs/2016/website/2016 School Fees Schedule.pdf.  [Accessed: 25- May- 2016].</li>
+              </ul>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+
+        <!--<div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <a href="#">
+              <img class="img-responsive" src="dist/img/post-sample-image.jpg" alt="">
+            </a>
+
+            <span class="caption text-muted">Captions are pretty cool hey.</span>
+          </div>
+        </div>-->
+
+
+        <div id="scatter"></div>
+      </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <p class="copyright text-muted">
+              Copyright &copy; James Spencer (Girton Grammar School) 2016
+            </p>
+
+            <p class="copyright text-muted">
+              VCE Informatics: Unit 4 Outcome 1
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+
+    <!-- D3 -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js" integrity="sha256-dsOXGNHAo/syFnazt+KTBsCQeRmlcW1XKL0bCK4Baec=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js" integrity="sha256-z0A2CQF8xxCKuOJsn4sJ5HBjxiHHRAfTX8hDF4RSN5s=" crossorigin="anonymous"></script>
+    <script src="dist/js/vendor/d3-jetpack.js"></script>
+
+    <!-- Leaflet -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js" integrity="sha256-aReBHzIjoMzKrp0H4XnxXIm0mwuNG/F+00pKDiFuLxI=" crossorigin="anonymous"></script>
+
+    <!-- Anchor.js -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.1/anchor.min.js" integrity="sha256-0fkit91h2dEZWgIwHythuZiLyxXPPpdWYnix+4EqvOA=" crossorigin="anonymous"></script>
+
+    <!-- Page JavaScript -->
+    <script src="dist/js/main-page.min.js"></script>
+    <script src="dist/js/elements/barchart.min.js"></script>
+    <script src="dist/js/elements/maps.min.js"></script>
+    <!--<script src="dist/js/elements/sidebar.min.js"></script>-->
+    <!--<script src="dist/js/elements/region.min.js"></script>-->
+    <script src="dist/js/elements/scatter.min.js"></script>
+  </body>
+</html>
+

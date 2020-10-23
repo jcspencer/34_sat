@@ -1,0 +1,120 @@
+/* Maps */
+.map {
+  width: 100%;
+  height: 375px;
+}
+svg {
+  position: relative;
+}
+path {
+  fill: #2d95bf;
+  fill-opacity: 0.2;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+path:hover {
+  fill-opacity: 0.5;
+}
+/*
+ * Regions Colouring
+ */
+.region_em {
+  fill: #3eba6f;
+  fill-opacity: 0.5;
+}
+.region_em:hover {
+  fill-opacity: 0.8;
+}
+.region_sm {
+  fill: #3eba6f;
+  fill-opacity: 0.4;
+}
+.region_sm:hover {
+  fill-opacity: 0.7;
+}
+.region_wm {
+  fill: #f0c419;
+  fill-opacity: 0.2;
+}
+.region_wm:hover {
+  fill-opacity: 0.5;
+}
+.region_bsw {
+  fill: #f0c419;
+  fill-opacity: 0.3;
+}
+.region_bsw:hover {
+  fill-opacity: 0.6;
+}
+.region_gr {
+  fill: #f0c419;
+  fill-opacity: 0.3;
+}
+.region_gr:hover {
+  fill-opacity: 0.6;
+}
+.region_nm {
+  fill: #f0c419;
+  fill-opacity: 0.4;
+}
+.region_nm:hover {
+  fill-opacity: 0.7;
+}
+.region_lm {
+  fill: #f15a5a;
+  fill-opacity: 0.2;
+}
+.region_lm:hover {
+  fill-opacity: 0.5;
+}
+.region_gi {
+  fill: #f15a5a;
+  fill-opacity: 0.3;
+}
+.region_gi:hover {
+  fill-opacity: 0.6;
+}
+.region_hu {
+  fill: #f15a5a;
+  fill-opacity: 0.4;
+}
+.region_hu:hover {
+  fill-opacity: 0.7;
+}
+/*
+ * Tooltips
+ */
+.d3-tip {
+  line-height: 1;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+  pointer-events: none;
+}
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  pointer-events: none;
+}
+/* Northward tooltips */
+.d3-tip.n:after {
+  content: "\25BC";
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+  text-align: center;
+}
+/* Eastward tooltips */
+.d3-tip.e:after {
+  content: "\25C0";
+  margin: -4px 0 0 0;
+  top: 50%;
+  left: -8px;
+}

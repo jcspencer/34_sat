@@ -1,0 +1,40 @@
+@import "../variables.less";
+@import "../mixins.less";
+
+/*
+ * Barcharts
+ */
+
+// government schools bar
+.bar--gov {
+  fill: @theme-red;
+}
+
+// independent schools bar
+.bar--ind {
+  fill: @theme-green;
+}
+
+// catholic schools bar
+.bar--cat {
+  fill: @theme-blue;
+}
+
+// overall bar
+.bar--ovr {
+  fill: @theme-yellow;
+}
+
+// axis label
+.axis text {
+  .sweet-sans;
+  font-size: 14px;
+}
+
+// axis lines
+.axis path,
+.axis line {
+  fill: none;
+  stroke: @gray-base;
+  shape-rendering: auto;
+}

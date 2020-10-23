@@ -1,0 +1,144 @@
+@import "../variables.less";
+@import "../mixins.less";
+
+/* Maps */
+
+.map { // container
+  width: 100%;
+  height: 375px;
+}
+
+svg {
+  position: relative;
+}
+
+// Default Region Style
+path {
+  fill: @theme-blue;
+  fill-opacity: 0.2;
+  stroke: #fff;
+  stroke-width: 1.5px;
+
+  &:hover {
+    fill-opacity: 0.5;
+  }
+}
+
+/*
+ * Regions Colouring
+ */
+
+.region_em { // Eastern Metropolitan (#1)
+  fill: @theme-green;
+  fill-opacity: 0.5;
+
+  &:hover {
+    fill-opacity: 0.8;
+  }
+}
+.region_sm { // Southern Metropolitan (#2)
+  fill: @theme-green;
+  fill-opacity: 0.4;
+
+  &:hover {
+    fill-opacity: 0.7;
+  }
+}
+.region_wm { // Western Metropolitan (#3)
+  fill: @theme-yellow;
+  fill-opacity: 0.2;
+
+  &:hover {
+    fill-opacity: 0.5;
+  }
+}
+.region_bsw { // Barwon South West (#4)
+  fill: @theme-yellow;
+  fill-opacity: 0.3;
+
+  &:hover {
+    fill-opacity: 0.6;
+  }
+}
+.region_gr { // Grampians (#5)
+  fill: @theme-yellow;
+  fill-opacity: 0.3;
+
+  &:hover {
+    fill-opacity: 0.6;
+  }
+}
+.region_nm { // Northern Metropolitan (#6)
+  fill: @theme-yellow;
+  fill-opacity: 0.4;
+
+  &:hover {
+    fill-opacity: 0.7;
+  }
+}
+.region_lm { // Loddon Mallee (#7)
+  fill: @theme-red;
+  fill-opacity: 0.2;
+
+  &:hover {
+    fill-opacity: 0.5;
+  }
+}
+.region_gi { // Gippsland (#8)
+  fill: @theme-red;
+  fill-opacity: 0.3;
+
+  &:hover {
+    fill-opacity: 0.6;
+  }
+}
+.region_hu { // Hume  (#9)
+  fill: @theme-red;
+  fill-opacity: 0.4;
+
+  &:hover {
+    fill-opacity: 0.7;
+  }
+}
+
+/*
+ * Tooltips
+ */
+
+.d3-tip {
+  line-height: 1;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  pointer-events: none;
+}
+
+/* Northward tooltips */
+.d3-tip.n:after {
+  content: "\25BC";
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+  text-align: center;
+}
+
+/* Eastward tooltips */
+.d3-tip.e:after {
+  content: "\25C0";
+  margin: -4px 0 0 0;
+  top: 50%;
+  left: -8px;
+}

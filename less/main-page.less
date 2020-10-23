@@ -1,0 +1,283 @@
+@import "variables.less";
+@import "mixins.less";
+
+// Navigation
+.navbar-custom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 3;
+
+  .sweet-sans;
+
+  .navbar-brand {
+    font-weight: 800;
+  }
+
+  .navbar-header {
+    .navbar-toggle {
+      color: @gray-light;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+  }
+
+  .nav {
+    li {
+      a {
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    .navbar-brand {
+      color: white;
+      padding: 20px;
+      &:hover,
+      &:focus {
+        color: fade(white, 80%);
+      }
+    }
+    .nav {
+      li {
+        a {
+          color: white;
+          padding: 20px;
+          &:hover,
+          &:focus {
+            color: fade(white, 80%);
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1170px) {
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    &.is-fixed {
+      /* when the user scrolls down, we hide the header right above the viewport */
+      position: fixed;
+      top: -61px;
+      background-color: fade(white, 90%);
+      border-bottom: 1px solid darken(white, 5%);
+      -webkit-transition: -webkit-transform 0.3s;
+      -moz-transition: -moz-transform 0.3s;
+      transition: transform 0.3s;
+      .navbar-brand {
+        color: @gray-dark;
+        &:hover,
+        &:focus {
+          color: @theme-primary;
+        }
+      }
+      .nav {
+        li {
+          a {
+            color: @gray-dark;
+            &:hover,
+            &:focus {
+              color: @theme-primary;
+            }
+          }
+        }
+      }
+    }
+
+    &.is-visible {
+      /* if the user changes the scrolling direction, we show the header */
+      -webkit-transform: translate3d(0, 100%, 0);
+      -moz-transform: translate3d(0, 100%, 0);
+      -ms-transform: translate3d(0, 100%, 0);
+      -o-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+}
+
+// Header
+.intro-header {
+  background-color: @gray-light;
+  background: no-repeat center center;
+  background-attachment: scroll;
+  .background-cover;
+
+  // NOTE: Background images are set within the HTML using inline CSS!
+  margin-bottom: 0px;
+
+  .site-heading,
+  .post-heading,
+  .page-heading {
+    padding: 100px 0 50px;
+    color: white;
+    @media only screen and (min-width: 768px) {
+      padding: 150px 0;
+    }
+  }
+
+  .site-heading,
+  .page-heading {
+    text-align: center;
+
+    h1 {
+      margin-top: 0;
+      font-size: 50px;
+    }
+
+    .subheading {
+      font-size: 24px;
+      line-height: 1.1;
+      display: block;
+      .serifa;
+      font-weight: 300;
+      margin: 10px 0 0;
+    }
+
+    @media only screen and (min-width: 768px) {
+      h1 {
+        font-size: 80px;
+      }
+    }
+  }
+  .post-heading {
+    h1 {
+      font-size: 72px;
+    }
+    .subheading,
+    .meta {
+      line-height: 1.1;
+      display: block;
+    }
+    .subheading {
+      .serifa;
+      font-size: 24px;
+      margin: 10px 0 30px;
+      font-weight: 600;
+    }
+    @media only screen and (min-width: 768px) {
+      h1 {
+        font-size: 72px;
+      }
+      .subheading {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+// Sections
+.section-heading {
+  font-size: 36px;
+  margin-top: 60px;
+  font-weight: 700;
+}
+
+.caption {
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  font-style: italic;
+  margin: 0;
+  display: block;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.page-footer {
+  padding: 0px 0 65px;
+  .list-inline {
+    margin: 0;
+    padding: 0;
+  }
+  .copyright {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+}
+
+// Button Styles
+.btn {
+  .serifa;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  border-radius: 0;
+  padding: 15px 25px;
+}
+
+.btn-lg {
+  font-size: 16px;
+  padding: 25px 35px;
+}
+
+.btn-default {
+  &:hover,
+  &:focus {
+    background-color: @theme-primary;
+    border: 1px solid @theme-primary;
+    color: white;
+  }
+}
+
+// Highlight Color Customization
+::-moz-selection {
+  color: white;
+  text-shadow: none;
+  background: @theme-primary;
+}
+
+::selection {
+  color: white;
+  text-shadow: none;
+  background: @theme-primary;
+}
+
+img::selection {
+  color: white;
+  background: transparent;
+}
+
+img::-moz-selection {
+  color: white;
+  background: transparent;
+}
+
+.divider {
+  height: 1px;
+  width:100%;
+  display: block; /* for use on default inline elements like span */
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: @gray-mid;
+}
+
+.reference {
+  word-break: break-all;
+}
+
+body {
+//  -webkit-tap-highlight-color: @theme-primary;
+}

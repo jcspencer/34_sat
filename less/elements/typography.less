@@ -1,0 +1,68 @@
+@import "../variables.less";
+@import "../mixins.less";
+
+// Global Components
+
+body {
+  .serifa;
+  font-size: 20px;
+  color: @gray-dark;
+}
+
+// Typography
+
+p {
+  line-height: 1.5;
+  margin: 20px 0;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+h1 {
+  .bureau-grot;
+  font-weight: bold;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  .sweet-sans;
+  font-weight: 500;
+}
+
+a {
+  color: @theme-link;
+  &:hover,
+  &:focus {
+    color: @theme-link-hover;
+  }
+}
+
+a img {
+  &:hover,
+  &:focus {
+    cursor: zoom-in;
+  }
+}
+
+blockquote {
+  color: @gray-light;
+  //.letter-gothic;
+  //font-style: italic;
+}
+
+hr.small {
+  max-width: 100px;
+  margin: 15px auto;
+  border-width: 4px;
+  border-color: white;
+}
+
+.figure {
+  .letter-gothic;
+  font-size: 16px;
+}
